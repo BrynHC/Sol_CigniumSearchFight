@@ -36,13 +36,13 @@ namespace Sol_CigniumSearchFight
             {
                 ///SEARCH IN GOOGLE
                 googleResult = oGoogleSearch.GetGoogleSearchList(item);
-                googleSearchResult = googleResult.ErrorMessage != string.Empty ? default(int) : googleResult.GoogleAmount;
+                googleSearchResult = googleResult.ErrorMessage != null ? default(int) : googleResult.GoogleAmount;
 
                 googleResultList.Add(googleResult);
 
                 ///SEARCH IN BING
                 bingResult = oBingSearch.GetBingSearchList(item);
-                bingSearchResult = bingResult.ErrorMessage != string.Empty ? default(int) : bingResult.BingAmount;
+                bingSearchResult = bingResult.ErrorMessage != null ? default(int) : bingResult.BingAmount;
 
                 bingResultList.Add(bingResult);
 
